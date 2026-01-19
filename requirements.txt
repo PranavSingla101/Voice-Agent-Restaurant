@@ -1,0 +1,9 @@
+livekit-agents
+livekit
+deepgram-sdk
+llama-index
+python-dotenv
+openai
+groq
+fastapi
+uvicorn

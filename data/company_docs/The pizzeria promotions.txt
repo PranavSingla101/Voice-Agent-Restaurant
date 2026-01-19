@@ -1,0 +1,45 @@
+The pizzeria DELHI – PROMOTIONS, SPECIALS, AND FAQs
+
+CURRENT PROMOTIONS
+
+Weekday Lunch Combo
+- Valid: Monday to Friday, 12:00 PM – 3:30 PM.
+- Offer: Any one pasta + garlic bread (4 pieces) + soft drink (330 ml).
+- Price: ₹649 (plus taxes).
+- Available for both pickup and delivery.
+- Not valid with any other coupons or offers.
+
+Tuesday Pizza Offer
+- Valid: Tuesdays only, all day.
+- Offer: Buy 2 large pizzas and get 1 medium Margherita free.
+- The free pizza must be Margherita (medium).
+- Delivery minimum of ₹600 still applies on paid portion of the order.
+
+Family Feast Combo
+- Valid: All days, after 6:00 PM.
+- Offer: 2 large pizzas + 1 Bruschetta Pomodoro + 1 Tiramisu.
+- Price: ₹1699 (plus taxes), free delivery within 3 km.
+- Ideal for 3–4 people.
+
+FAQS – EXAMPLES
+
+Q: Do you have vegetarian options?
+A: Yes, we have several vegetarian pizzas and pastas, including Margherita Pizza, Verdure Grigliate Pizza, Lasagna al Forno (Vegetarian), and multiple salads and appetizers. The assistant should recommend vegetarian items from the menu context.
+
+Q: Do you have vegan options?
+A: We do not have explicitly labelled vegan dishes in this sample menu. The assistant should state that vegan options are limited and suggest items that can be customized (for example, some salads without cheese) if that is consistent with the menu context.
+
+Q: What is the typical waiting time for pickup?
+A: Around 20–30 minutes depending on the size of the order and current rush.
+
+Q: Can I place a large party order?
+A: Yes, but for more than 8 pizzas, the assistant should advise placing the order at least 4 hours in advance and possibly confirm details with the restaurant directly.
+
+Q: Can I pay online?
+A: Yes. For delivery, customers can pay via UPI, card, or cash. For prepaid orders, payment details or a payment link are shared via SMS or WhatsApp by the restaurant staff.
+
+GUIDELINES FOR THE ASSISTANT WITH PROMOTIONS
+
+- Mention promotions only if they are clearly relevant to the current order or if the user asks for deals.
+- When applying a combo or offer, clearly explain what is included and how it affects the total.
+- Do not invent new promotions; use only what is defined in this document.

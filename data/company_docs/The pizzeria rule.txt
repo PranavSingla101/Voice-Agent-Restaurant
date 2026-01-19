@@ -1,0 +1,84 @@
+The pizzeria DELHI – OPERATING RULES AND POLICIES
+
+BASIC INFO
+Restaurant name: Trattoria Delhi
+Cuisine: Italian
+City: New Delhi
+Neighbourhood: Greater Kailash II
+
+OPENING HOURS
+- Monday to Thursday: 11:00 AM – 11:00 PM
+- Friday and Saturday: 11:00 AM – 12:00 Midnight
+- Sunday: 11:00 AM – 11:00 PM
+
+Last order times:
+- Dine-in and pickup: 30 minutes before closing time
+- Delivery: 45 minutes before closing time
+
+PICKUP VS DELIVERY
+
+Pickup:
+- Available every day during opening hours.
+- Orders can be scheduled for a specific time within the same day.
+- Typical preparation time: 20–30 minutes depending on order size.
+
+Delivery:
+- Delivery available within selected areas of South Delhi only.
+- Primary delivery neighbourhoods:
+  - Greater Kailash I and II
+  - Kailash Colony
+  - Lajpat Nagar
+  - East of Kailash
+- If the user’s address is outside these areas, inform them that delivery is not available and suggest pickup.
+
+DELIVERY FEES AND MINIMUM ORDER
+
+Minimum order for delivery:
+- ₹600 (food total, before taxes and delivery fee).
+
+Delivery fee:
+- Within 3 km radius: ₹79
+- Between 3 km and 6 km: ₹129
+- Beyond 6 km: delivery is not available.
+
+Free delivery:
+- Orders above ₹1500 get free delivery within the service area.
+
+ESTIMATED DELIVERY TIMES
+- Typical delivery time: 35–55 minutes depending on distance and order size.
+- During peak hours (8–10 PM) delivery may take up to 60–75 minutes.
+
+ORDER CONSTRAINTS
+
+- Maximum pizzas per single order via phone/voice assistant: 8.
+- Large group/catering orders (more than 8 pizzas) should be requested at least 4 hours in advance.
+- Custom or off-menu items are not allowed; the assistant should only use items from the menu context.
+- Half-and-half pizzas are not supported at this time.
+
+PAYMENT METHODS
+
+Accepted payment methods:
+- Cash on delivery (COD) for delivery orders.
+- UPI (via QR code or link).
+- Major credit and debit cards for both pickup and delivery.
+- For voice orders, if user selects prepaid, payment link or instructions are sent by SMS/WhatsApp (handled offline by staff; the assistant should mention that payment details will be shared separately).
+
+TAXES AND CHARGES
+
+- Prices shown in the menu are base prices and do not include taxes.
+- Applicable GST will be added to the final bill.
+- Service charge is not automatically added; any tip is optional.
+
+ALLERGY AND DIETARY INFORMATION
+
+- Many items contain dairy and gluten.
+- Pizzas can be made with gluten-free base (limited options; see menu).
+- We cannot guarantee a completely nut-free or gluten-free kitchen.
+- The assistant should recommend that customers with severe allergies consult the restaurant directly.
+
+GENERAL GUIDELINES FOR THE ASSISTANT
+
+- Always be polite, concise, and friendly.
+- If unsure whether an item or option exists, say you are not sure and avoid making it up.
+- Use the opening hours, delivery areas, and minimum order rules defined in this document.
+- If a customer wants something outside the rules (e.g., delivery outside zone), gently suggest pickup as an alternative.

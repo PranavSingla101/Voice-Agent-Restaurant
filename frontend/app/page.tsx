@@ -19,7 +19,7 @@ const IDLE_BARS = [4, 8, 14, 20, 14, 8, 4];
 function LoadingSpinner() {
   return (
     <svg
-      className="h-10 w-10 animate-spin text-white"
+      className="h-12 w-12 animate-spin text-white"
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
@@ -133,13 +133,13 @@ export default function Home() {
             type="button"
             onClick={handleStart}
             disabled={isConnecting}
-            className="relative flex h-24 w-24 items-center justify-center rounded-full bg-amber-600 shadow-lg transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400/40 disabled:pointer-events-none disabled:opacity-70"
+            className="relative flex h-28 w-28 items-center justify-center rounded-full bg-amber-600 shadow-lg transition hover:bg-amber-500 focus:outline-none focus:ring-4 focus:ring-amber-400/40 disabled:pointer-events-none disabled:opacity-70"
             aria-label={isConnecting ? "Connecting…" : "Press to connect and speak"}
           >
             {isConnecting ? (
               <LoadingSpinner />
             ) : (
-              <MicIcon className="h-12 w-12 text-white" />
+              <MicIcon className="h-14 w-14 text-white" />
             )}
           </button>
 
@@ -259,14 +259,14 @@ function CallUI() {
               e.preventDefault();
               setIsPressed(true);
             }}
-            className={`flex h-20 w-20 items-center justify-center rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-400/40 ${
+            className={`flex h-28 w-28 items-center justify-center rounded-full shadow-lg transition focus:outline-none focus:ring-4 focus:ring-amber-400/40 ${
               isPressed
                 ? "bg-amber-500 scale-105"
                 : "bg-amber-600 hover:bg-amber-500"
             }`}
             aria-label={isPressed ? "Speaking… Release to mute" : "Hold to speak"}
           >
-            <MicIcon className="h-10 w-10 text-white" />
+            <MicIcon className="h-14 w-14 text-white" />
           </button>
 
           <p className="text-sm text-stone-500 dark:text-stone-400">

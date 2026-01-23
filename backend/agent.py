@@ -32,7 +32,6 @@ LLM_CLIENT, LLM_MODEL = _init_llm()
 
 
 async def run_agent():
-    # Note: this uses the simple VoiceAssistant helper; adjust to AgentSession if needed.
     llm_name = "groq" if GROQ_API_KEY else "openai"
     assistant = VoiceAssistant(
         stt="deepgram",

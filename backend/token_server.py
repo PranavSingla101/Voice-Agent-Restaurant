@@ -1,5 +1,5 @@
 import os
-from datetime import datetime, timedelta, timezone
+from datetime import timedelta
 from typing import Optional
 
 from dotenv import load_dotenv

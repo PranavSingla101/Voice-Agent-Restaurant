@@ -1,45 +1,89 @@
-The pizzeria DELHI – PROMOTIONS, SPECIALS, AND FAQs
+The Pizzeria, Delhi – PROMOTIONS, SPECIALS, AND FAQs
 
 CURRENT PROMOTIONS
 
 Weekday Lunch Combo
 - Valid: Monday to Friday, 12:00 PM – 3:30 PM.
 - Offer: Any one pasta + garlic bread (4 pieces) + soft drink (330 ml).
-- Price: ₹649 (plus taxes).
+- Price: ₹649 (plus 5% GST).
 - Available for both pickup and delivery.
 - Not valid with any other coupons or offers.
+- Pasta selection: Customer can choose any pasta from the menu (Spaghetti Aglio e Olio, Penne Arrabbiata, Fettuccine Alfredo, or Lasagna al Forno).
+- Soft drink selection: Customer can choose any soft drink (Coke, Diet Coke, or Sprite).
+- Cannot substitute items in the combo; must order as specified.
+- If customer wants to add extra items to the combo, regular menu prices apply for additions.
 
 Tuesday Pizza Offer
-- Valid: Tuesdays only, all day.
+- Valid: Tuesdays only, all day (11:00 AM to closing time).
 - Offer: Buy 2 large pizzas and get 1 medium Margherita free.
-- The free pizza must be Margherita (medium).
-- Delivery minimum of ₹600 still applies on paid portion of the order.
+- The free pizza must be Margherita (medium) - cannot be substituted.
+- The 2 large pizzas can be any pizzas from the menu.
+- Delivery minimum of ₹600 still applies on paid portion of the order (the 2 large pizzas must total at least ₹600 before taxes).
+- Available for both pickup and delivery.
+- Not valid with any other coupons or offers.
+- If customer orders more than 2 large pizzas, only one free medium Margherita is given (not per pair).
 
 Family Feast Combo
-- Valid: All days, after 6:00 PM.
+- Valid: All days, after 6:00 PM until closing time.
 - Offer: 2 large pizzas + 1 Bruschetta Pomodoro + 1 Tiramisu.
-- Price: ₹1699 (plus taxes), free delivery within 3 km.
+- Price: ₹1699 (plus 5% GST), free delivery within 3 km.
 - Ideal for 3–4 people.
+- Pizza selection: Customer can choose any 2 large pizzas from the menu.
+- Cannot substitute Bruschetta Pomodoro or Tiramisu with other items.
+- Available for both pickup and delivery.
+- For delivery: Free delivery applies only within 3 km radius. Beyond 3 km, regular delivery charges apply.
+- Not valid with any other coupons or offers.
 
 FAQS – EXAMPLES
 
 Q: Do you have vegetarian options?
-A: Yes, we have several vegetarian pizzas and pastas, including Margherita Pizza, Verdure Grigliate Pizza, Lasagna al Forno (Vegetarian), and multiple salads and appetizers. The assistant should recommend vegetarian items from the menu context.
+A: Yes, we have several vegetarian pizzas and pastas, including Margherita Pizza, Verdure Grigliate Pizza, Four Cheese Quattro Formaggi Pizza, Truffle Funghi Pizza, Lasagna al Forno (Vegetarian), and multiple salads and appetizers. The assistant should recommend vegetarian items from the menu context.
 
 Q: Do you have vegan options?
-A: We do not have explicitly labelled vegan dishes in this sample menu. The assistant should state that vegan options are limited and suggest items that can be customized (for example, some salads without cheese) if that is consistent with the menu context.
+A: We do not have explicitly labelled vegan dishes in this sample menu. The assistant should state that vegan options are limited and suggest items that can be customized (for example, some salads without cheese) if that is consistent with the menu context. However, we cannot guarantee complete vegan preparation due to shared kitchen equipment.
 
 Q: What is the typical waiting time for pickup?
-A: Around 20–30 minutes depending on the size of the order and current rush.
+A: Around 20–30 minutes depending on the size of the order and current rush. During peak hours (7:00 PM - 9:00 PM), it may take 30–45 minutes.
 
 Q: Can I place a large party order?
-A: Yes, but for more than 8 pizzas, the assistant should advise placing the order at least 4 hours in advance and possibly confirm details with the restaurant directly.
+A: Yes, but for more than 8 pizzas, the assistant should advise placing the order at least 4 hours in advance and possibly confirm details with the restaurant directly. For very large orders (20+ pizzas), 24 hours advance notice is recommended.
 
 Q: Can I pay online?
-A: Yes. For delivery, customers can pay via UPI, card, or cash. For prepaid orders, payment details or a payment link are shared via SMS or WhatsApp by the restaurant staff.
+A: Yes. For delivery, customers can pay via UPI, card, or cash on delivery. For prepaid orders, payment details or a payment link are shared via SMS or WhatsApp by the restaurant staff. Pickup orders can also be prepaid via UPI or card.
+
+Q: Can I modify or cancel my order after placing it?
+A: Orders can be modified or cancelled within 5 minutes of placement by calling the restaurant directly. After 5 minutes, modifications may not be possible if preparation has started. Cancellations after preparation has started may incur charges. The assistant should inform customers to contact the restaurant directly for order modifications.
+
+Q: What if an item I want is out of stock?
+A: If an item is unavailable, the assistant should inform the customer immediately and suggest similar alternatives from the menu. The assistant should never invent items or prices.
+
+Q: Can I customize combo items?
+A: Combo items generally cannot be substituted. However, within combos, customers can choose which specific items they want (e.g., which pasta in the lunch combo, which pizzas in the family combo). The assistant should clarify what can and cannot be customized based on the specific promotion rules.
+
+Q: Do you offer discounts for bulk orders?
+A: For orders above ₹3000, customers may receive a 5% discount. For orders above ₹5000, a 10% discount may apply. These discounts are subject to manager approval and cannot be combined with other promotions. The assistant should mention this only if the customer asks about bulk discounts.
+
+Q: What happens if my delivery is late?
+A: We aim to deliver within the estimated time frame. If delivery is significantly delayed (more than 20 minutes beyond estimated time), customers should contact the restaurant. Compensation or refunds are handled on a case-by-case basis by restaurant management.
+
+Q: Do you have a loyalty program or rewards?
+A: Currently, we do not have a formal loyalty program. However, we regularly offer promotions and special deals that are announced on our social media and website.
+
+Q: Can I order for a future date/time?
+A: Yes, orders can be scheduled for pickup or delivery at a specific time on the same day, subject to opening hours. For orders scheduled more than 4 hours in advance, confirmation may be required closer to the time.
+
+Q: What if I have food allergies?
+A: Customers with severe allergies should inform the assistant, who should recommend consulting the restaurant directly before placing an order. The assistant should refer to the allergy information in the menu and rules documents. We cannot guarantee a completely allergen-free kitchen due to shared preparation areas.
 
 GUIDELINES FOR THE ASSISTANT WITH PROMOTIONS
 
 - Mention promotions only if they are clearly relevant to the current order or if the user asks for deals.
 - When applying a combo or offer, clearly explain what is included and how it affects the total.
 - Do not invent new promotions; use only what is defined in this document.
+- Always check if the current day and time make a promotion valid before mentioning it.
+- When a customer asks about deals or discounts, list all currently valid promotions based on day and time.
+- If a customer's order qualifies for a promotion, proactively mention it and explain the savings.
+- Be clear about what can and cannot be customized in combo offers.
+- If a promotion requires a minimum order amount, clearly state this requirement.
+- For time-sensitive promotions (like Weekday Lunch Combo), confirm the current time is within the valid window.
+- If a customer wants to use a promotion but their order doesn't qualify, explain why and suggest how they can qualify (e.g., add items to meet minimum).

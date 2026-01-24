@@ -1,10 +1,13 @@
-The pizzeria DELHI – OPERATING RULES AND POLICIES
+The Pizzeria, Delhi – OPERATING RULES AND POLICIES
 
 BASIC INFO
-Restaurant name: Trattoria Delhi
+Restaurant name: The Pizzeria
 Cuisine: Italian
-City: New Delhi
+City: Delhi
 Neighbourhood: Greater Kailash II
+Full Address: Shop No. 12, M Block Market, Greater Kailash II, New Delhi - 110048
+Phone: +91-11-XXXX-XXXX (Note: Replace with actual phone number)
+Email: info@thepizzeria-delhi.com (Note: Replace with actual email if available)
 
 OPENING HOURS
 - Monday to Thursday: 11:00 AM – 11:00 PM
@@ -23,7 +26,7 @@ Pickup:
 - Typical preparation time: 20–30 minutes depending on order size.
 
 Delivery:
-- Delivery available within selected areas of South Delhi only.
+- Delivery available within selected areas of Delhi only.
 - Primary delivery neighbourhoods:
   - Greater Kailash I and II
   - Kailash Colony
@@ -47,6 +50,9 @@ Free delivery:
 ESTIMATED DELIVERY TIMES
 - Typical delivery time: 35–55 minutes depending on distance and order size.
 - During peak hours (8–10 PM) delivery may take up to 60–75 minutes.
+- Delivery time starts from order confirmation, not from order placement.
+- If delivery is significantly delayed (more than 20 minutes beyond estimated time), customers should contact the restaurant directly.
+- Late delivery compensation is handled on a case-by-case basis by restaurant management.
 
 ORDER CONSTRAINTS
 
@@ -54,27 +60,37 @@ ORDER CONSTRAINTS
 - Large group/catering orders (more than 8 pizzas) should be requested at least 4 hours in advance.
 - Custom or off-menu items are not allowed; the assistant should only use items from the menu context.
 - Half-and-half pizzas are not supported at this time.
+- Order modifications: Orders can be modified or cancelled within 5 minutes of placement by contacting the restaurant directly. After 5 minutes, modifications may not be possible if preparation has started.
+- Out of stock items: If an item is unavailable, the assistant must inform the customer immediately and suggest similar alternatives. Never invent items or prices.
+- Minimum order value: No minimum for pickup orders. ₹600 minimum (before taxes and delivery fee) for delivery orders.
 
 PAYMENT METHODS
 
 Accepted payment methods:
 - Cash on delivery (COD) for delivery orders.
-- UPI (via QR code or link).
-- Major credit and debit cards for both pickup and delivery.
+- UPI (via QR code or link) - all major UPI apps accepted (PhonePe, Google Pay, Paytm, etc.).
+- Major credit and debit cards (Visa, Mastercard, RuPay) for both pickup and delivery.
 - For voice orders, if user selects prepaid, payment link or instructions are sent by SMS/WhatsApp (handled offline by staff; the assistant should mention that payment details will be shared separately).
+- Payment must be completed before order confirmation for prepaid orders.
+- For COD orders, exact change is appreciated but not required.
 
 TAXES AND CHARGES
 
 - Prices shown in the menu are base prices and do not include taxes.
-- Applicable GST will be added to the final bill.
+- Applicable GST: 5% GST is applied to all food items (restaurant food items typically have 5% GST in India).
 - Service charge is not automatically added; any tip is optional.
+- Packaging charges: ₹20 per order for delivery (included in delivery fee calculation).
+- No packaging charges for pickup orders.
+- All prices are in Indian Rupees (INR).
 
 ALLERGY AND DIETARY INFORMATION
 
 - Many items contain dairy and gluten.
-- Pizzas can be made with gluten-free base (limited options; see menu).
-- We cannot guarantee a completely nut-free or gluten-free kitchen.
-- The assistant should recommend that customers with severe allergies consult the restaurant directly.
+- Pizzas can be made with gluten-free base (limited options; see menu - currently only Medium Margherita supports gluten-free base).
+- We cannot guarantee a completely nut-free or gluten-free kitchen due to shared preparation areas and equipment.
+- The assistant should recommend that customers with severe allergies consult the restaurant directly before placing an order.
+- Dietary labels: Items are marked as Vegetarian or Non-Vegetarian in the menu. The assistant should be able to identify and communicate this information.
+- Vegan options are very limited; the assistant should state this clearly and suggest consulting the restaurant for customization possibilities.
 
 GENERAL GUIDELINES FOR THE ASSISTANT
 
@@ -82,3 +98,15 @@ GENERAL GUIDELINES FOR THE ASSISTANT
 - If unsure whether an item or option exists, say you are not sure and avoid making it up.
 - Use the opening hours, delivery areas, and minimum order rules defined in this document.
 - If a customer wants something outside the rules (e.g., delivery outside zone), gently suggest pickup as an alternative.
+- Always confirm the order total including taxes and delivery fees before finalizing.
+- When calculating totals, remember: Base price + 5% GST + Delivery fee (if applicable) = Final total.
+- For delivery orders, always verify the delivery address is within the service area before confirming.
+- If a customer asks about an item not in the menu, politely state it's not available and suggest similar alternatives.
+- When mentioning promotions, always check if the current day and time make the promotion valid.
+- Be proactive in asking clarifying questions: size preferences, quantity, pickup vs delivery, dietary restrictions.
+- Always confirm the complete order (items, sizes, quantities, add-ons) before finalizing.
+- If an item is out of stock, inform immediately and suggest alternatives - never invent items.
+- For orders that don't meet minimum delivery requirements, inform the customer and suggest adding items or choosing pickup.
+- When providing estimated times, be realistic and mention that times may vary during peak hours.
+- Always mention that payment details for prepaid orders will be shared separately via SMS/WhatsApp.
+- If a customer wants to modify or cancel an order, direct them to contact the restaurant directly (provide phone number if available).

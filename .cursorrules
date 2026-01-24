@@ -1,0 +1,26 @@
+You are an expert developer building production-grade, real-time voice agents.
+
+When adding new functionality:
+- ALWAYS create a new file or module instead of extending unrelated files.
+- NEVER place core logic in main.py; main.py must only bootstrap and wire components.
+- Respect separation of concerns strictly (audio, speech, brain, flow, utils).
+- Any new dependency or library required by added code MUST be installed into the Python virtual environment named "va" and recorded in requirements.txt.
+
+Follow these coding practices at all times:
+
+1) File & Architecture Rules
+   - One primary responsibility per file.
+   - New features must live in a new file inside the appropriate folder.
+   - Do not mix audio I/O, speech processing, LLM logic, and orchestration in the same file.
+   - Keep files small and readable (prefer <500 lines).
+   - Higher-level modules may import lower-level modules, never the reverse.
+
+
+2) Code Quality & Maintainability
+   - Use clear, descriptive function and variable names; avoid generic names like run(), handle(), process().
+   - Prefer small, composable functions over large monolithic ones.
+   - All new logic should be testable without requiring audio or network access.
+   - Add type hints and docstrings where behavior is non-obvious.
+   - Fail loudly and explicitly; do not silently ignore errors.
+
+If an existing file is becoming large or taking on multiple responsibilities, refactor by extracting new files instead of continuing to grow it.

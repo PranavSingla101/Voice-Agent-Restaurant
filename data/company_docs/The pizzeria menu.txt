@@ -1,7 +1,16 @@
-THE PIZZERIA DELHI – FULL MENU
+The Pizzeria, Delhi – FULL MENU
 
 LOCATION
-THE PIZZERIA Delhi, Greater Kailash II, New Delhi
+The Pizzeria, Greater Kailash II, Delhi
+Full Address: Shop No. 12, M Block Market, Greater Kailash II, New Delhi - 110048
+Contact: +91-11-XXXX-XXXX (Note: Replace with actual phone number)
+
+IMPORTANT NOTES
+- All prices are exclusive of GST (5% GST applicable on food items)
+- Prices are subject to change without prior notice
+- Portion sizes: "Regular" means standard single-serving portion suitable for one person
+- All items are prepared fresh to order
+- Images of menu items are available - customers can ask to see any item
 
 CATEGORIES
 - Pizzas
@@ -15,163 +24,230 @@ PIZZAS
 
 Margherita Pizza
 Category: Pizza
-Description: Classic Neapolitan-style pizza with San Marzano tomato sauce, fresh mozzarella, and basil.
+Dietary: Vegetarian
+Description: Classic Neapolitan-style pizza with San Marzano tomato sauce, fresh mozzarella, and basil. A timeless favorite with simple, fresh ingredients.
+Keywords: cheese pizza, classic pizza, vegetarian pizza, margherita, margarita
 Available Sizes:
-- Medium (10-inch) – ₹449
-- Large (12-inch) – ₹549
+- Medium (10-inch) – ₹449 (serves 1-2 people)
+- Large (12-inch) – ₹549 (serves 2-3 people)
 Optional Add-ons (each add-on applies per pizza):
 - Extra mozzarella – ₹60
 - Extra basil – ₹40
 - Gluten-free base (Medium only) – +₹80
+Common Allergens: Contains dairy (mozzarella), gluten (unless gluten-free base selected)
 
 Pepperoni Piccante Pizza
 Category: Pizza
-Description: Spicy pepperoni, tomato sauce, mozzarella, and chili oil.
+Dietary: Non-Vegetarian
+Description: Spicy pepperoni, tomato sauce, mozzarella, and chili oil. A bold and flavorful pizza with a kick of heat.
+Keywords: pepperoni pizza, spicy pizza, meat pizza, hot pizza, piccante
 Available Sizes:
-- Medium (10-inch) – ₹549
-- Large (12-inch) – ₹649
+- Medium (10-inch) – ₹549 (serves 1-2 people)
+- Large (12-inch) – ₹649 (serves 2-3 people)
 Optional Add-ons:
 - Extra pepperoni – ₹80
 - Jalapeños – ₹50
 - Stuffed crust (Large only) – +₹120
+Common Allergens: Contains dairy (mozzarella), gluten, meat (pepperoni)
 
 Verdure Grigliate Pizza
 Category: Pizza
-Description: Grilled bell peppers, zucchini, mushrooms, olives, tomato sauce, and mozzarella.
+Dietary: Vegetarian
+Description: Grilled bell peppers, zucchini, mushrooms, olives, tomato sauce, and mozzarella. A hearty vegetarian option with Mediterranean flavors.
+Keywords: vegetable pizza, veggie pizza, grilled vegetables, vegetarian, mediterranean pizza
 Available Sizes:
-- Medium (10-inch) – ₹529
-- Large (12-inch) – ₹629
+- Medium (10-inch) – ₹529 (serves 1-2 people)
+- Large (12-inch) – ₹629 (serves 2-3 people)
 Optional Add-ons:
 - Feta cheese – ₹70
 - Extra olives – ₹50
+Common Allergens: Contains dairy (mozzarella, optional feta), gluten
 
 Four Cheese Quattro Formaggi Pizza
 Category: Pizza
-Description: Mozzarella, provolone, parmesan, and gorgonzola on a white sauce base.
+Dietary: Vegetarian
+Description: Mozzarella, provolone, parmesan, and gorgonzola on a white sauce base. A rich and creamy cheese lover's delight.
+Keywords: four cheese, quattro formaggi, cheese pizza, white sauce pizza, vegetarian
 Available Sizes:
-- Medium (10-inch) – ₹599
-- Large (12-inch) – ₹699
+- Medium (10-inch) – ₹599 (serves 1-2 people)
+- Large (12-inch) – ₹699 (serves 2-3 people)
+Common Allergens: Contains dairy (multiple cheeses), gluten
 
 Truffle Funghi Pizza
 Category: Pizza
-Description: Creamy truffle sauce, mozzarella, wild mushrooms, and parmesan.
+Dietary: Vegetarian
+Description: Creamy truffle sauce, mozzarella, wild mushrooms, and parmesan. A premium pizza with earthy truffle flavors.
+Keywords: truffle pizza, mushroom pizza, funghi, vegetarian, premium pizza
 Available Sizes:
-- Medium (10-inch) – ₹649
-- Large (12-inch) – ₹749
+- Medium (10-inch) – ₹649 (serves 1-2 people)
+- Large (12-inch) – ₹749 (serves 2-3 people)
+Common Allergens: Contains dairy (mozzarella, parmesan), gluten
 
 PASTAS
 
 Spaghetti Aglio e Olio
 Category: Pasta
-Description: Spaghetti tossed with garlic, chili flakes, parsley, and extra virgin olive oil.
-Portion Size: Regular
+Dietary: Vegetarian (can be made non-vegetarian with chicken add-on)
+Description: Spaghetti tossed with garlic, chili flakes, parsley, and extra virgin olive oil. A simple yet flavorful classic Italian pasta dish.
+Keywords: spaghetti, garlic pasta, aglio olio, vegetarian pasta, simple pasta
+Portion Size: Regular (standard single-serving, approximately 200g cooked pasta)
 Price: ₹399
 Optional Add-ons:
-- Grilled chicken – ₹120
+- Grilled chicken – ₹120 (makes it non-vegetarian)
 - Extra garlic – ₹20
+Common Allergens: Contains gluten (spaghetti), may contain traces of nuts
 
 Penne Arrabbiata
 Category: Pasta
-Description: Penne in a spicy tomato and chili sauce with basil.
-Portion Size: Regular
+Dietary: Vegetarian
+Description: Penne in a spicy tomato and chili sauce with basil. "Arrabbiata" means "angry" in Italian, referring to the spicy heat of this dish.
+Keywords: penne, arrabbiata, spicy pasta, tomato pasta, vegetarian pasta, hot pasta
+Portion Size: Regular (standard single-serving, approximately 200g cooked pasta)
 Price: ₹449
 Optional Add-ons:
 - Parmesan topping – ₹40
 - Extra spicy (more chili) – no extra charge
+Common Allergens: Contains gluten (penne), dairy (optional parmesan)
 
 Fettuccine Alfredo
 Category: Pasta
-Description: Fettuccine in a rich parmesan cream sauce.
-Portion Size: Regular
+Dietary: Vegetarian (can be made non-vegetarian with chicken add-on)
+Description: Fettuccine in a rich parmesan cream sauce. A creamy and indulgent pasta dish.
+Keywords: fettuccine, alfredo, cream pasta, white sauce pasta, parmesan pasta
+Portion Size: Regular (standard single-serving, approximately 200g cooked pasta)
 Price: ₹499
 Optional Add-ons:
-- Grilled chicken – ₹140
+- Grilled chicken – ₹140 (makes it non-vegetarian)
 - Sauteed mushrooms – ₹80
+Common Allergens: Contains gluten (fettuccine), dairy (parmesan, cream)
 
 Lasagna al Forno (Vegetarian)
 Category: Pasta
-Description: Baked lasagna with vegetables, tomato sauce, and béchamel.
-Portion Size: Single serve
+Dietary: Vegetarian
+Description: Baked lasagna with vegetables, tomato sauce, and béchamel. A hearty baked pasta dish with layers of pasta, vegetables, and creamy sauce.
+Keywords: lasagna, lasagne, baked pasta, vegetarian lasagna, vegetable lasagna
+Portion Size: Single serve (one portion, approximately 300g)
 Price: ₹549
+Common Allergens: Contains gluten (lasagna sheets), dairy (béchamel, cheese)
 
 APPETIZERS
 
 Garlic Bread Classic
 Category: Appetizer
-Description: Oven-baked garlic bread with herbs.
-Portion Size: 4 pieces
+Dietary: Vegetarian
+Description: Oven-baked garlic bread with herbs. Fresh bread brushed with garlic butter and herbs, perfect as a starter.
+Keywords: garlic bread, bread, appetizer, starter, side
+Portion Size: 4 pieces (4 slices of bread)
 Price: ₹199
 Optional Add-ons:
 - Add cheese – ₹60
+Common Allergens: Contains gluten (bread), dairy (butter, optional cheese)
 
 Bruschetta Pomodoro
 Category: Appetizer
-Description: Toasted bread topped with marinated tomatoes, basil, and olive oil.
-Portion Size: 4 pieces
+Dietary: Vegetarian
+Description: Toasted bread topped with marinated tomatoes, basil, and olive oil. A fresh and light Italian appetizer.
+Keywords: bruschetta, tomato bruschetta, pomodoro, appetizer, starter, vegetarian
+Portion Size: 4 pieces (4 slices of toasted bread with topping)
 Price: ₹249
+Common Allergens: Contains gluten (bread)
 
 Crispy Calamari Fritti
 Category: Appetizer
-Description: Deep-fried calamari with lemon and herbed aioli.
-Portion Size: Sharing
+Dietary: Non-Vegetarian
+Description: Deep-fried calamari with lemon and herbed aioli. Tender squid rings fried to golden perfection, served with tangy aioli.
+Keywords: calamari, squid, seafood, fried, appetizer, starter, non-vegetarian
+Portion Size: Sharing (suitable for 2-3 people, approximately 200g)
 Price: ₹449
+Common Allergens: Contains seafood (calamari/squid), gluten (breading), dairy (aioli), may contain traces of eggs
 
 SALADS
 
 Insalata Caprese
 Category: Salad
-Description: Tomato, fresh mozzarella, basil, and balsamic reduction.
-Portion Size: Regular
+Dietary: Vegetarian
+Description: Tomato, fresh mozzarella, basil, and balsamic reduction. A classic Italian salad with fresh ingredients.
+Keywords: caprese salad, tomato mozzarella salad, italian salad, fresh salad, vegetarian
+Portion Size: Regular (standard single-serving salad)
 Price: ₹349
+Common Allergens: Contains dairy (mozzarella)
 
 Mediterranean Green Salad
 Category: Salad
-Description: Lettuce, olives, cherry tomatoes, cucumbers, onions, lemon vinaigrette.
-Portion Size: Regular
+Dietary: Vegetarian
+Description: Lettuce, olives, cherry tomatoes, cucumbers, onions, lemon vinaigrette. A fresh and healthy salad with Mediterranean flavors.
+Keywords: mediterranean salad, green salad, fresh salad, healthy, vegetarian, lettuce salad
+Portion Size: Regular (standard single-serving salad)
 Price: ₹299
+Common Allergens: May contain traces of nuts (depending on vinaigrette preparation)
 
 DESSERTS
 
 Tiramisu
 Category: Dessert
-Description: Classic tiramisu with coffee-soaked ladyfingers and mascarpone.
-Portion Size: Single serve
+Dietary: Vegetarian (contains eggs)
+Description: Classic tiramisu with coffee-soaked ladyfingers and mascarpone. A rich Italian dessert with coffee and cocoa flavors.
+Keywords: tiramisu, coffee dessert, italian dessert, mascarpone, classic dessert
+Portion Size: Single serve (one portion, approximately 150g)
 Price: ₹299
+Common Allergens: Contains dairy (mascarpone), eggs, gluten (ladyfingers), coffee, may contain traces of nuts
 
 Panna Cotta
 Category: Dessert
-Description: Vanilla panna cotta with berry coulis.
-Portion Size: Single serve
+Dietary: Vegetarian
+Description: Vanilla panna cotta with berry coulis. A smooth and creamy Italian dessert with sweet berry sauce.
+Keywords: panna cotta, vanilla dessert, italian dessert, creamy dessert, berry dessert
+Portion Size: Single serve (one portion, approximately 120g)
 Price: ₹279
+Common Allergens: Contains dairy (cream), may contain traces of nuts
 
 Nutella Calzone
 Category: Dessert
-Description: Warm fried calzone filled with Nutella and dusted with icing sugar.
-Portion Size: Sharing or single large
+Dietary: Vegetarian
+Description: Warm fried calzone filled with Nutella and dusted with icing sugar. A sweet dessert calzone, perfect for sharing or enjoying solo.
+Keywords: nutella calzone, dessert calzone, sweet calzone, nutella, chocolate dessert, fried dessert
+Portion Size: Sharing or single large (one large calzone, suitable for 1-2 people)
 Price: ₹349
+Common Allergens: Contains gluten (dough), dairy (may contain in Nutella), hazelnuts (Nutella), eggs (dough)
 
 BEVERAGES
 
 Soft Drinks (330 ml can)
 Category: Beverage
+Dietary: Vegetarian
+Description: Carbonated soft drinks in 330ml cans. Refreshing beverages to complement your meal.
+Keywords: soft drinks, soda, coke, cola, sprite, carbonated drinks, beverages
 Options:
-- Coke – ₹99
-- Diet Coke – ₹99
-- Sprite – ₹99
+- Coke (Coca-Cola) – ₹99
+- Diet Coke (Coca-Cola Zero Sugar) – ₹99
+- Sprite (Lemon-Lime) – ₹99
+Common Allergens: None (but contains caffeine in Coke and Diet Coke)
 
 Iced Tea
 Category: Beverage
+Dietary: Vegetarian
+Description: Refreshing iced tea available in different flavors. Perfect for cooling down.
+Keywords: iced tea, cold tea, lemon tea, peach tea, beverages, drinks
 Flavours:
-- Lemon – ₹149
-- Peach – ₹159
+- Lemon Iced Tea – ₹149 (330ml)
+- Peach Iced Tea – ₹159 (330ml)
+Common Allergens: Contains caffeine (tea)
 
 Sparkling Water (750 ml)
 Category: Beverage
-Price: ₹249
+Dietary: Vegetarian
+Description: Premium sparkling mineral water. A refreshing non-carbonated option.
+Keywords: sparkling water, mineral water, water, beverages, drinks
+Price: ₹249 (750ml bottle)
+Common Allergens: None
 
 Fresh Lime Soda
 Category: Beverage
+Dietary: Vegetarian
+Description: Fresh lime juice mixed with soda water. Available in sweet, salt, or mixed flavors.
+Keywords: lime soda, fresh lime, nimbu soda, beverages, drinks, refreshing
 Options:
-- Sweet – ₹129
-- Salt – ₹129
-- Mixed – ₹129
+- Sweet Lime Soda – ₹129 (330ml)
+- Salt Lime Soda – ₹129 (330ml)
+- Mixed Lime Soda (sweet and salt) – ₹129 (330ml)
+Common Allergens: None

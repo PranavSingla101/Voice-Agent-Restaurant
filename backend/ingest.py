@@ -1,14 +1,28 @@
 import os
 from pathlib import Path
 
-from llama_index.core import SimpleDirectoryReader, VectorStoreIndex
+from llama_index.core import SimpleDirectoryReader, VectorStoreIndex, Settings
 from llama_index.core.storage import StorageContext
 from llama_index.core.storage.docstore import SimpleDocumentStore
 from llama_index.core.vector_stores import SimpleVectorStore
 
+# Get project root (one level up from backend directory)
+PROJECT_ROOT = Path(__file__).parent.parent
+DATA_DIR = PROJECT_ROOT / "data" / "company_docs"
+STORAGE_DIR = PROJECT_ROOT / "storage" / "restaurant_index"
 
-DATA_DIR = Path("data/company_docs")
-STORAGE_DIR = Path("storage/restaurant_index")
+# Configure local embedding model (no API key required)
+# Try to use local embeddings, fallback to HuggingFace if needed
+try:
+    from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+    Settings.embed_model = HuggingFaceEmbedding(
+        model_name="BAAI/bge-small-en-v1.5"
+    )
+except ImportError:
+    # If HuggingFace embeddings not available, try to use local default
+    # This will require llama-index-embeddings-huggingface package
+    print("Warning: HuggingFace embeddings not available. Install with: pip install llama-index-embeddings-huggingface")
+    raise
 
 
 def main() -> None:

@@ -1,5 +1,6 @@
 import logging
 import os
+import sys
 from dotenv import load_dotenv
 from livekit import rtc
 from livekit.agents import (
@@ -19,10 +20,12 @@ from livekit.agents import (
 from livekit.plugins import (
     noise_cancellation,
     silero,
+    groq,
 )
 from livekit.plugins.turn_detector.multilingual import MultilingualModel
 
-from rag import search_menu
+from rag_engine import get_index
+
 from tools.display_helpers import handle_show_menu_item
 from tools.cart_helpers import (
     handle_add_item_to_cart,
@@ -41,6 +44,34 @@ from tools.order_helpers import (
 logger = logging.getLogger("agent-Sage-17cf")
 
 load_dotenv()
+
+# Check API Key
+if not os.getenv("GROQ_API_KEY"):
+    print("WARNING: GROQ_API_KEY not found in environment!")
+else:
+    print("GROQ_API_KEY loaded successfully.")
+
+# Global index getter to avoid reloading - or load in init
+# Global variable for the index
+_RAG_INDEX = None
+
+def _get_rag_index():
+    global _RAG_INDEX
+    if _RAG_INDEX is None:
+        _RAG_INDEX = get_index()
+    return _RAG_INDEX
+
+def search_menu(query: str) -> str:
+    index = _get_rag_index()
+    if index is None:
+        return "No menu data is available."
+    
+    retriever = index.as_retriever(similarity_top_k=3)
+    nodes = retriever.retrieve(query)
+    if not nodes:
+        return "No relevant menu information found."
+        
+    return "\n\n".join(n.text for n in nodes)
 
 
 class RestaurantAssistant(Agent):
@@ -94,6 +125,8 @@ FUNCTION USAGE:
         """
         # Get the text content from the user's message
         user_query = new_message.text_content()
+        print(f"DEBUG: User speech detected: '{user_query}'")
+        logger.info(f"User speech detected: '{user_query}'")
         
         if user_query:
             # Search the menu/knowledge base for relevant information
@@ -184,11 +217,13 @@ def prewarm(proc: JobProcess):
 
 server.setup_fnc = prewarm
 
-@server.rtc_session(agent_name="Sage-17cf")
+@server.rtc_session()
 async def entrypoint(ctx: JobContext):
+    logger.info(f"Agent interacting with room: {ctx.room.name}")
+    print(f"DEBUG: Agent interacting with room: {ctx.room.name}")
     session = AgentSession(
         stt=inference.STT(model="assemblyai/universal-streaming", language="en"),
-        llm=inference.LLM(model="groq/llama-3.3-70b-versatile"),
+        llm=groq.LLM(model="llama-3.3-70b-versatile"),
         tts=inference.TTS(
             model="cartesia/sonic-3",
             voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
@@ -211,4 +246,13 @@ async def entrypoint(ctx: JobContext):
 
 
 if __name__ == "__main__":
-    cli.run_app(server)
+    try:
+        cli.run_app(server)
+    except KeyboardInterrupt:
+        print("\n\nAgent server stopped by user")
+        sys.exit(0)
+    except Exception as e:
+        print(f"\nERROR: {e}", file=sys.stderr)
+        import traceback
+        traceback.print_exc()
+        sys.exit(1)

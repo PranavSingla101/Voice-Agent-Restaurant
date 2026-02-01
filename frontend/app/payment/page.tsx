@@ -53,9 +53,9 @@ export default function PaymentPage() {
           const res = await fetch(tokenEndpoint, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ 
-              room_name: DEFAULT_ROOM, 
-              identity: storedIdentity || identity 
+            body: JSON.stringify({
+              room_name: DEFAULT_ROOM,
+              identity: storedIdentity || identity
             }),
           });
           if (res.ok) {
@@ -129,10 +129,14 @@ export default function PaymentPage() {
 
   if (isLoading) {
     return (
-      <div className="min-h-screen bg-stone-100 dark:bg-stone-950 text-stone-900 dark:text-stone-100 flex items-center justify-center">
-        <div className="text-center">
+      <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 flex items-center justify-center relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-amber-500/10 rounded-full blur-[100px]" />
+          <div className="absolute bottom-[-20%] right-[-10%] w-[50%] h-[50%] bg-orange-500/10 rounded-full blur-[100px]" />
+        </div>
+        <div className="text-center relative z-10">
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-amber-600 mx-auto mb-4"></div>
-          <p className="text-stone-600 dark:text-stone-400">Loading...</p>
+          <p className="text-stone-600 dark:text-stone-400 font-medium">Loading payment details...</p>
         </div>
       </div>
     );
@@ -140,17 +144,26 @@ export default function PaymentPage() {
 
   if (cartItems.length === 0) {
     return (
-      <div className="min-h-screen bg-stone-100 dark:bg-stone-950 text-stone-900 dark:text-stone-100 flex items-center justify-center px-4">
-        <div className="text-center max-w-md">
-          <h1 className="text-2xl font-semibold mb-4">No Items in Cart</h1>
-          <p className="text-stone-600 dark:text-stone-400 mb-6">
-            Your cart is empty. Please add items before proceeding to payment.
+      <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 flex items-center justify-center px-4 relative overflow-hidden">
+        <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-20%] left-[-10%] w-[50%] h-[50%] bg-amber-500/5 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="text-center max-w-md relative z-10 bg-white/50 dark:bg-stone-900/50 backdrop-blur-xl p-8 rounded-2xl border border-stone-200/50 dark:border-stone-800/50 shadow-xl">
+          <div className="w-16 h-16 bg-stone-100 dark:bg-stone-800 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-stone-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+            </svg>
+          </div>
+          <h1 className="text-2xl font-bold mb-2">Your Cart is Empty</h1>
+          <p className="text-stone-500 dark:text-stone-400 mb-8">
+            Looks like you haven't added anything to your cart yet.
           </p>
           <button
             onClick={() => router.push("/")}
-            className="px-6 py-3 bg-amber-600 hover:bg-amber-500 text-white rounded-lg font-medium transition-colors"
+            className="w-full px-6 py-3 bg-stone-900 dark:bg-stone-100 hover:bg-stone-800 dark:hover:bg-stone-200 text-white dark:text-stone-900 rounded-xl font-semibold transition-all active:scale-95"
           >
-            Go Back
+            Go Back directly
           </button>
         </div>
       </div>
@@ -195,24 +208,36 @@ export default function PaymentPage() {
     }, [room, router]);
 
     return (
-      <div className="min-h-screen bg-stone-100 dark:bg-stone-950 text-stone-900 dark:text-stone-100">
-        <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 relative overflow-hidden">
+        {/* Background Gradients */}
+        <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+          <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[100px]" />
+        </div>
+
+        <div className="max-w-4xl mx-auto px-4 py-12 relative z-10">
           {/* Header */}
-          <header className="mb-8">
-            <h1 className="text-3xl font-semibold mb-2">Payment</h1>
-            <p className="text-stone-600 dark:text-stone-400">
-              Complete your order by reviewing the details below. You can say "go back" or "cancel payment" to return to the menu.
+          <header className="mb-10 text-center sm:text-left">
+            <h1 className="text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-stone-600 dark:from-white dark:to-stone-400">
+              Checkout
+            </h1>
+            <p className="text-stone-500 dark:text-stone-400 text-lg max-w-2xl">
+              Complete your order by reviewing the details below. You can say <span className="font-semibold text-amber-600 dark:text-amber-400">"go back"</span> or <span className="font-semibold text-red-600 dark:text-red-400">"cancel payment"</span> at any time.
             </p>
           </header>
 
-          <PaymentForm
-            cartItems={cartItems}
-            calculateSubtotal={calculateSubtotal}
-            calculateGST={calculateGST}
-            calculateTotal={calculateTotal}
-            handleDone={handleDone}
-            onCancel={() => router.push("/")}
-          />
+          <div className="bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl rounded-2xl shadow-xl border border-stone-200/50 dark:border-stone-800/50 overflow-hidden">
+            <div className="p-6 sm:p-8">
+              <PaymentForm
+                cartItems={cartItems}
+                calculateSubtotal={calculateSubtotal}
+                calculateGST={calculateGST}
+                calculateTotal={calculateTotal}
+                handleDone={handleDone}
+                onCancel={() => router.push("/")}
+              />
+            </div>
+          </div>
         </div>
       </div>
     );
@@ -237,24 +262,36 @@ export default function PaymentPage() {
 
   // Fallback: render without LiveKit if no connection
   return (
-    <div className="min-h-screen bg-stone-100 dark:bg-stone-950 text-stone-900 dark:text-stone-100">
-      <div className="max-w-4xl mx-auto px-4 py-8">
+    <div className="min-h-screen bg-stone-50 dark:bg-stone-950 text-stone-900 dark:text-stone-100 relative overflow-hidden">
+      {/* Background Gradients */}
+      <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+        <div className="absolute top-[-10%] right-[-10%] w-[600px] h-[600px] bg-amber-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-orange-500/5 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 py-12 relative z-10">
         {/* Header */}
-        <header className="mb-8">
-          <h1 className="text-3xl font-semibold mb-2">Payment</h1>
-          <p className="text-stone-600 dark:text-stone-400">
+        <header className="mb-10 text-center sm:text-left">
+          <h1 className="text-4xl font-bold mb-3 bg-clip-text text-transparent bg-gradient-to-r from-stone-900 to-stone-600 dark:from-white dark:to-stone-400">
+            Checkout
+          </h1>
+          <p className="text-stone-500 dark:text-stone-400 text-lg">
             Complete your order by reviewing the details below
           </p>
         </header>
 
-        <PaymentForm
-          cartItems={cartItems}
-          calculateSubtotal={calculateSubtotal}
-          calculateGST={calculateGST}
-          calculateTotal={calculateTotal}
-          handleDone={handleDone}
-          onCancel={undefined}
-        />
+        <div className="bg-white/60 dark:bg-stone-900/60 backdrop-blur-xl rounded-2xl shadow-xl border border-stone-200/50 dark:border-stone-800/50 overflow-hidden">
+          <div className="p-6 sm:p-8">
+            <PaymentForm
+              cartItems={cartItems}
+              calculateSubtotal={calculateSubtotal}
+              calculateGST={calculateGST}
+              calculateTotal={calculateTotal}
+              handleDone={handleDone}
+              onCancel={() => router.push("/")}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

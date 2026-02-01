@@ -48,7 +48,7 @@ export default function PlateAnimation({
             <div className="relative w-64 h-64 bg-gradient-to-br from-stone-200 to-stone-300 dark:from-stone-700 dark:to-stone-800 rounded-full shadow-2xl border-4 border-stone-400 dark:border-stone-600 overflow-hidden">
               {/* Plate rim */}
               <div className="absolute inset-0 rounded-full border-8 border-stone-300 dark:border-stone-600 opacity-50"></div>
-              
+
               {/* Image container */}
               <div className="absolute inset-4 rounded-full overflow-hidden bg-white dark:bg-stone-900">
                 {imagePath ? (
@@ -84,7 +84,7 @@ export default function PlateAnimation({
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
-                className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-stone-900 dark:bg-stone-100 text-white dark:text-stone-900 px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap shadow-lg"
+                className="absolute -bottom-10 left-1/2 -translate-x-1/2 bg-stone-900/90 dark:bg-stone-100/90 backdrop-blur-md text-white dark:text-stone-900 px-5 py-2.5 rounded-xl text-sm font-bold tracking-wide whitespace-nowrap shadow-xl border border-stone-700/50 dark:border-stone-200/50"
               >
                 {itemName}
               </motion.div>

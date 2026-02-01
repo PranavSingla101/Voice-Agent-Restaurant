@@ -73,14 +73,14 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
                 stiffness: 300,
                 damping: 30,
               }}
-              className="fixed right-0 top-0 h-full w-full max-w-md bg-stone-100 dark:bg-stone-900 text-stone-900 dark:text-stone-100 shadow-2xl z-50 flex flex-col"
+              className="fixed right-0 top-0 h-full w-full max-w-md bg-stone-50/90 dark:bg-stone-900/90 backdrop-blur-2xl text-stone-900 dark:text-stone-100 shadow-2xl z-50 flex flex-col border-l border-stone-200/50 dark:border-stone-800/50"
             >
               {/* Header */}
-              <div className="flex items-center justify-between p-6 border-b border-stone-300 dark:border-stone-700">
-                <h2 className="text-xl font-semibold">Your Cart</h2>
+              <div className="flex items-center justify-between p-6 border-b border-stone-200/50 dark:border-stone-800/50">
+                <h2 className="text-xl font-bold tracking-tight">Your Cart</h2>
                 <button
                   onClick={onClose}
-                  className="w-8 h-8 rounded-full hover:bg-stone-200 dark:hover:bg-stone-800 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
+                  className="w-8 h-8 rounded-full hover:bg-stone-200/50 dark:hover:bg-stone-800/50 flex items-center justify-center transition-colors focus:outline-none focus:ring-2 focus:ring-amber-400"
                   aria-label="Close cart"
                 >
                   <svg
@@ -99,15 +99,17 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
               </div>
 
               {/* Cart Items */}
-              <div className="flex-1 overflow-y-auto p-6">
+              <div className="flex-1 overflow-y-auto p-6 scrollbar-thin scrollbar-thumb-stone-200 dark:scrollbar-thumb-stone-800">
                 {items.length === 0 ? (
                   <div className="flex flex-col items-center justify-center h-full text-center">
-                    <CartIcon className="w-16 h-16 text-stone-400 dark:text-stone-600 mb-4" />
-                    <p className="text-stone-500 dark:text-stone-400 text-lg">
+                    <div className="w-24 h-24 bg-stone-100 dark:bg-stone-800/50 rounded-full flex items-center justify-center mb-6">
+                      <CartIcon className="w-10 h-10 text-stone-400 dark:text-stone-500" />
+                    </div>
+                    <p className="text-stone-900 dark:text-stone-100 text-lg font-medium">
                       Your cart is empty
                     </p>
-                    <p className="text-stone-400 dark:text-stone-500 text-sm mt-2">
-                      Add items to your cart by speaking to the assistant
+                    <p className="text-stone-500 dark:text-stone-400 text-sm mt-2 max-w-[200px]">
+                      Start speaking to add delicious items to your order
                     </p>
                   </div>
                 ) : (
@@ -115,11 +117,11 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
                     {items.map((item, index) => (
                       <div
                         key={index}
-                        className="bg-white dark:bg-stone-800 rounded-lg p-4 border border-stone-200 dark:border-stone-700"
+                        className="bg-white/60 dark:bg-stone-800/60 rounded-xl p-4 border border-stone-200/50 dark:border-stone-700/50 shadow-sm transition-all hover:shadow-md hover:bg-white/80 dark:hover:bg-stone-800/80"
                       >
                         <div className="flex items-start justify-between">
                           <div className="flex-1">
-                            <h3 className="font-medium text-stone-900 dark:text-stone-100">
+                            <h3 className="font-semibold text-stone-900 dark:text-stone-100">
                               {item.name}
                             </h3>
                             {item.size && (
@@ -129,22 +131,22 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
                             )}
                             {item.addons && item.addons.length > 0 && (
                               <p className="text-sm text-stone-500 dark:text-stone-400 mt-1">
-                                Add-ons: {item.addons.join(", ")}
+                                + {item.addons.join(", ")}
                               </p>
                             )}
-                            <div className="flex items-center gap-2 mt-2">
-                              <span className="text-sm text-stone-500 dark:text-stone-400">
-                                Quantity: {item.quantity}
+                            <div className="flex items-center gap-2 mt-3">
+                              <span className="text-xs font-medium px-2 py-1 bg-stone-100 dark:bg-stone-900/50 rounded-md text-stone-600 dark:text-stone-400">
+                                Qty: {item.quantity}
                               </span>
                             </div>
                           </div>
                           <div className="text-right ml-4">
-                            <p className="font-semibold text-stone-900 dark:text-stone-100">
+                            <p className="font-bold text-stone-900 dark:text-stone-100">
                               ₹{(item.price * item.quantity).toFixed(0)}
                             </p>
                             {item.quantity > 1 && (
-                              <p className="text-xs text-stone-500 dark:text-stone-400">
-                                ₹{item.price.toFixed(0)} each
+                              <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">
+                                ₹{item.price.toFixed(0)} ea
                               </p>
                             )}
                           </div>
@@ -157,12 +159,12 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
 
               {/* Footer with Totals */}
               {items.length > 0 && (
-                <div className="border-t border-stone-300 dark:border-stone-700 p-6 space-y-3 bg-white dark:bg-stone-800">
+                <div className="border-t border-stone-200/50 dark:border-stone-700/50 p-8 space-y-4 bg-white/50 dark:bg-stone-900/30 backdrop-blur-lg">
                   <div className="flex justify-between text-sm">
                     <span className="text-stone-600 dark:text-stone-400">
                       Subtotal
                     </span>
-                    <span className="text-stone-900 dark:text-stone-100">
+                    <span className="font-medium text-stone-900 dark:text-stone-100">
                       ₹{calculateSubtotal().toFixed(0)}
                     </span>
                   </div>
@@ -170,11 +172,11 @@ export default function Cart({ isOpen, onClose, items }: CartProps) {
                     <span className="text-stone-600 dark:text-stone-400">
                       GST (5%)
                     </span>
-                    <span className="text-stone-900 dark:text-stone-100">
+                    <span className="font-medium text-stone-900 dark:text-stone-100">
                       ₹{calculateGST().toFixed(0)}
                     </span>
                   </div>
-                  <div className="flex justify-between text-lg font-semibold pt-2 border-t border-stone-300 dark:border-stone-700">
+                  <div className="flex justify-between text-xl font-bold pt-4 border-t border-stone-200 dark:border-stone-700/50">
                     <span className="text-stone-900 dark:text-stone-100">
                       Total
                     </span>

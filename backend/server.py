@@ -15,90 +15,55 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from livekit import agents, rtc
-from livekit.agents import JobContext, WorkerOptions, cli
-from livekit.agents.voice import AgentSession, room_io
+from livekit.agents import JobContext, WorkerOptions, cli, inference
+from livekit.agents import AgentSession, room_io
+from livekit.plugins import groq, silero
+from livekit.plugins.turn_detector.multilingual import MultilingualModel
+
 from agent import RestaurantAssistant
 
-
-# Try to import Deepgram plugin (available in newer versions)
-# If not available, we'll use string-based configuration
-try:
-    from livekit.plugins import deepgram
-    DEEPGRAM_AVAILABLE = True
-except ImportError:
-    DEEPGRAM_AVAILABLE = False
-    print("Warning: livekit.plugins.deepgram not available. Using string-based Deepgram configuration.")
-
-# Try to import Groq plugin (available in newer versions)
-# If not available, we'll use string-based configuration
-try:
-    from livekit.plugins import groq
-    GROQ_AVAILABLE = True
-except ImportError:
-    GROQ_AVAILABLE = False
-    print("Warning: livekit.plugins.groq not available. Using string-based Groq configuration.")
+# Deepgram code commented out as requested
+# try:
+#     from livekit.plugins import deepgram
+#     DEEPGRAM_AVAILABLE = True
+# except ImportError:
+#     DEEPGRAM_AVAILABLE = False
 
 
 async def restaurant_agent(ctx: JobContext):
     """
     Entry point for the voice agent session.
-    
-    This function is called when a new agent session is requested.
-    It sets up the AgentSession with STT, LLM, TTS, and other components,
-    then starts the session with our RestaurantAssistant agent.
-    
-    Args:
-        ctx: Job context containing room information and other session details
     """
-    # Create the agent session with:
-    # - STT (Speech-to-Text): Deepgram for transcribing user speech
-    # - LLM (Large Language Model): Groq with Llama 3.3 70B (free, fast inference)
-    # - TTS (Text-to-Speech): Silero ONNX (free, local, no API key required)
-    # - VAD (Voice Activity Detection): Silero for detecting when user is speaking
-    # Note: Silero TTS runs locally - no API keys needed!
+    # Create the agent session with standard configuration:
+    # - STT: AssemblyAI (via LiveKit Inference)
+    # - LLM: Groq (via Plugin)
+    # - TTS: Cartesia (via LiveKit Inference)
     
-    # Configure STT - use plugin if available, otherwise use string
-    if DEEPGRAM_AVAILABLE:
-        stt_config = deepgram.STTv2(
-            model="nova-2", 
-            smart_format=True,
-        )
-        # Configure Deepgram TTS (Aura)
-        tts_config = deepgram.TTS(
-            model="aura-asteria-en",  # Options: aura-asteria-en (female), aura-orpheus-en (male), etc.
-        )
-    else:
-        # Fallback to string-based configuration for older versions
-        stt_config = "deepgram/nova-2"
-        # Fallback TTS if plugin/key missing (though DEEPGRAM_AVAILABLE check implies key presence usually)
-        tts_config = SileroTTS(language="en", speaker="en_0", sample_rate=16000)
-    
-    # Configure LLM - use plugin if available, otherwise use string
-    if GROQ_AVAILABLE:
-        llm_config = groq.LLM(
-            model="llama-3.3-70b-versatile",  # Groq model without "groq/" prefix
-        )
-    else:
-        llm_config = "groq"
-    
-    # Configure VAD - Silero is now standard in livekit.plugins.silero
-    # We can use the VAD class from the plugin, or pass an instance to AgentSession
-    import livekit.plugins.silero as silero
-    vad_config = silero.VAD.load()
+    # Pre-load VAD
+    vad_model = silero.VAD.load()
 
     session = AgentSession(
-        stt=stt_config,
-        llm=llm_config,
-        tts=tts_config,
-        vad=vad_config,
+        stt=inference.STT(model="assemblyai/universal-streaming", language="en"),
+        llm=groq.LLM(model="llama-3.3-70b-versatile"),
+        tts=inference.TTS(
+            model="cartesia/sonic-3",
+            voice="9626c31c-bec5-4cca-baa8-f8ba9e84c8bc",
+            language="en"
+        ),
+        turn_detection=MultilingualModel(),
+        vad=vad_model,
+        preemptive_generation=True,
     )
 
-    # Start the session with:
-    # - The room to join (from the job context)
-    # - Our RestaurantAssistant agent instance
+    # Start the session
     await session.start(
         agent=RestaurantAssistant(),
         room=ctx.room,
+        room_options=room_io.RoomOptions(
+            audio_input=room_io.AudioInputOptions(
+                noise_cancellation=lambda params: noise_cancellation.BVCTelephony() if params.participant.kind == rtc.ParticipantKind.PARTICIPANT_KIND_SIP else noise_cancellation.BVC(),
+            ),
+        ),
     )
 
 
@@ -110,8 +75,8 @@ if __name__ == "__main__":
         "LIVEKIT_URL": os.getenv("LIVEKIT_URL"),
         "LIVEKIT_API_KEY": os.getenv("LIVEKIT_API_KEY"),
         "LIVEKIT_API_SECRET": os.getenv("LIVEKIT_API_SECRET"),
-        "DEEPGRAM_API_KEY": os.getenv("DEEPGRAM_API_KEY"),
         "GROQ_API_KEY": os.getenv("GROQ_API_KEY"),
+        # "DEEPGRAM_API_KEY": os.getenv("DEEPGRAM_API_KEY"), # Commented out
     }
     
     missing = [name for name, value in required_vars.items() if not value]
@@ -123,15 +88,9 @@ if __name__ == "__main__":
     print("OK: All environment variables found")
     print(f"LiveKit URL: {os.getenv('LIVEKIT_URL')}")
     print("Starting agent server...")
-    print("   (This will connect to LiveKit Cloud - requires internet)")
-    print("   Press Ctrl+C to stop\n")
     
-    # Create worker options with the entrypoint function
-    # This manages the lifecycle of agent sessions
     opts = WorkerOptions(entrypoint_fnc=restaurant_agent)
     
-    # Run the agent server using LiveKit's CLI
-    # This handles command-line arguments like 'dev', 'start', 'console', etc.
     try:
         cli.run_app(opts)
     except KeyboardInterrupt:

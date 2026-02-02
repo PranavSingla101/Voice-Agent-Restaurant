@@ -141,7 +141,10 @@ FUNCTION USAGE:
     # Display tools
     @function_tool()
     async def show_menu_item(self, ctx: RunContext, item_name: str) -> str:
-        """Show a visual representation of a menu item to the customer."""
+        """
+        Show a visual representation (image) of a menu item to the customer.
+        Use this when the user asks to see what something looks like.
+        """
         return await handle_show_menu_item(self, item_name)
 
     # Cart management tools
@@ -152,24 +155,37 @@ FUNCTION USAGE:
         item_name: str,
         quantity: int = 1,
         size: str = None,
-        price: float = None,
+        price: float = 0.0,
         addons: list[str] = None,
     ) -> str:
-        """Add an item to the customer's cart."""
+        """
+        Add an item to the customer's cart.
+        
+        Args:
+            item_name: The name of the item to add.
+            quantity: The number of items to add (default: 1).
+            size: The size of the item, if applicable (e.g., "Small", "Medium", "Large").
+            price: The price of the item. THIS MUST BE FOUND IN THE MENU CONTEXT.
+            addons: A list of any extra toppings or customizations.
+        """
         return await handle_add_item_to_cart(
             self, item_name, quantity, size, price, addons
         )
 
     @function_tool()
     async def remove_item_from_cart(self, ctx: RunContext, item_name: str) -> str:
-        """Remove an item from the customer's cart."""
+        """
+        Remove an item from the customer's cart.
+        """
         return await handle_remove_item_from_cart(self, item_name)
 
     @function_tool()
     async def update_cart_quantity(
         self, ctx: RunContext, item_name: str, new_quantity: int
     ) -> str:
-        """Update the quantity of an item in the customer's cart."""
+        """
+        Update the quantity of a specific item in the customer's cart.
+        """
         return await handle_update_cart_quantity(self, item_name, new_quantity)
 
     @function_tool()
@@ -196,17 +212,24 @@ FUNCTION USAGE:
     # Order management tools
     @function_tool()
     async def proceed_to_payment(self, ctx: RunContext) -> str:
-        """Proceed to the payment page when the customer confirms their order."""
+        """
+        Proceed to the payment page when the customer confirms they are ready to pay.
+        IMPORTANT: Only call this after the user has explicitly confirmed their order.
+        """
         return await handle_proceed_to_payment(self)
 
     @function_tool()
     async def cancel_order(self, ctx: RunContext, order_id: str = None) -> str:
-        """Cancel a confirmed order if within the cancellation window."""
+        """
+        Cancel a confirmed order.
+        """
         return await handle_cancel_order(self, order_id)
 
     @function_tool()
     async def modify_order(self, ctx: RunContext) -> str:
-        """Modify a confirmed order if within the modification window."""
+        """
+        Modify a confirmed order.
+        """
         return handle_modify_order(self)
 
 
